@@ -1,7 +1,7 @@
 // CRUD
 
 const asyncHandler = require('express-async-handler')
-const { default: Todo } = require('../../client/src/pages/Todo')
+const Todo = require('../model/Todo')
 
 exports.createTodo = asyncHandler(async (req, res) => {
     await Todo.create(req.body)
